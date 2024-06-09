@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body *{
+    font-family: 'Lobster', sans-serif !important;
+}
+
+html , body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: #f0f0f0;
+
+}
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+
+
+button{
+    padding: 0;
+    border: none;
+}
+
+h1 , h2 , p{
+    margin: 0;
+}
+
+
+
+header{
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    padding: 10px 20px;
+
+}
+
+footer{
+    background: #1d2023;
+    height: 70px;
+    position: relative;
+}
+
+
+
+header  nav{
+    display: flex;
+    gap: 2rem;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons a {
+    display: inline-block;
+}
+
+.icons a:hover{
+    background-color: transparent;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+header .icons{
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+header .icons img{
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+header > .inner_container , footer> .inner_container , main > .inner_container{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header > .inner_container , footer> .inner_container{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.copyright {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    background: #ffffff;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 11%;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+}
+
+.socials a:hover img {
+    opacity: 0.7;
+}
+
+
+input{
+    padding: .5rem 1rem;
+    transition: border .5s;
+    outline: transparent;
+    border: 1px solid lightgray;
+}
+
+input:focus{
+    border-color: #548eaa;
+}
+
