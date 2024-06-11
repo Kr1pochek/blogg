@@ -84,4 +84,10 @@ input a:hover{
     background: none;
     font-size: 1rem;
     color: #548eaa;
+    transition: color .5s;
 }
+
+.switch button:hover{
+    color: #2b5164;
+}
+
