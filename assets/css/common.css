@@ -167,3 +167,6 @@ input:focus{
     border-color: #548eaa;
 }
 
+button{
+    cursor: pointer;
+}

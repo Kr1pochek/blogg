@@ -29,7 +29,44 @@
     </div>
 </header>
 
-<main></main>
+<main>
+    <div class="inner_container">
+        <div class="register ">
+            <form action="">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="nickname">Ник</label>
+                <input type="text" id="nickname">
+                <label for="password">Пароль</label>
+                <input type="password" id="password">
+                <label for="password_repeat">Повторите Пароль</label>
+                <input type="password" id="password_repeat">   
+                <label>
+                    <input type="checkbox">
+                    <span>Я принимаю условия Пользовательского соглашения</span>
+                </label>
+                <button>Зарегестрироваться</button>
+            </form>
+            <div class="switch">
+                <p>Уже зарегированы?</p>
+                <button id="switch_to_login">Войти</button>
+            </div>
+        </div>
+        <div class="login active">
+            <form action="">
+                <label for="login_email">Email</label>
+                <input type="email" id="login_email">
+                <label for="login_password">Пароль</label>
+                <input type="password" id="login_password">
+                <button>Войти</button>
+            </form>
+            <div class="switch">
+                <p>Ещё нет аккаунта? </p>
+                <button id="switch_to_register">Зарегестрируйтесь</button>
+            </div>
+        </div>
+    </div>
+</main>
 
 <footer>
     <div class="copyright">
