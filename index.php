@@ -11,24 +11,7 @@
 </head>
 <body>
 <header>
-    <div class="inner_container">
-        <button class="burger-menu">☰</button>
-        <nav class="main-nav">
-            <a href="#">Все</a>
-            <a href="#">Разработка</a>
-            <a href="#">Дизайн</a>
-            <a href="#">Администрирование</a>
-        </nav>
-        <div class="icons">
-            <a href="search.html">
-                <img src="assets/images/search-svgrepo-com.svg" alt="">
-            </a>
-            <a href="user.html">
-                <img src="assets/images/profile-1341-svgrepo-com.svg" alt="">
-            </a>
-        </div>
-    </div>
-</header>
+    <?php include "include/header.php";?>
 
 <div class="overlay"></div>
 
@@ -45,7 +28,7 @@
                         <img src="https://picsum.photos/id/123/1902/1080" alt="">
                     </div>
                     <p class="preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi consequuntur cumque deleniti esse, eveniet magnam nam nulla, officiis quas, quibusdam quisquam quod saepe totam voluptas voluptatem voluptatum? Adipisci consequatur error eum, ex magnam quidem recusandae repellat sint? A assumenda aut beatae consequuntur culpa dolorum earum error et eum incidunt minus natus nesciunt nobis officia, sapiente tenetur vitae. Amet animi eum fugit laboriosam magnam nulla repellat? Aspernatur, labore libero? Ea eos exercitationem minus modi repellendus sint soluta sunt tempora vitae. Animi atque debitis ducimus earum inventore magnam nihil officia, quibusdam quis recusandae similique temporibus tenetur ullam velit voluptas? Doloribus, ex!</p>
-                    <a href="post.html">
+                    <a href="post.php">
                         Читать Далее
                     </a>
                     <div class="post_stats">
@@ -128,7 +111,7 @@
                         <img src="https://picsum.photos/id/123/1080/1920" alt="">
                     </div>
                     <p class="preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi consequuntur cumque deleniti esse, eveniet magnam nam nulla, officiis quas, quibusdam quisquam quod saepe totam voluptas voluptatem voluptatum? Adipisci consequatur error eum, ex magnam quidem recusandae repellat sint? A assumenda aut beatae consequuntur culpa dolorum earum error et eum incidunt minus natus nesciunt nobis officia, sapiente tenetur vitae. Amet animi eum fugit laboriosam magnam nulla repellat? Aspernatur, labore libero? Ea eos exercitationem minus modi repellendus sint soluta sunt tempora vitae. Animi atque debitis ducimus earum inventore magnam nihil officia, quibusdam quis recusandae similique temporibus tenetur ullam velit voluptas? Doloribus, ex!</p>
-                    <a href="post.html">
+                    <a href="post.php">
                         Читать Далее
                     </a>
                     <div class="post_stats">
@@ -148,28 +131,7 @@
         </div>
     </main>
 
-    <footer>
-            <div class="copyright">
-                <p>© 2006–2024, blog</p>
-            </div>
-            <div class="socials">
-                <a href="#">
-                    <img src="assets/images/vk-svgrepo-com.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="assets/images/telegram-svgrepo-com.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="assets/images/facebook-rounded-svgrepo-com.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="assets/images/twitter-rounded-svgrepo-com.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="assets/images/instagram-rounded-svgrepo-com.svg" alt="">
-                </a>
-            </div>
-    </footer>
+   <?php include "include/footer.php";?>
 
     <script src="assets/js/index.js"></script>
 </body>

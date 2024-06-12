@@ -1,22 +1,29 @@
-body{
+body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
-main{
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.inner_container{
+.inner_container {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
-main .inner_container > div{
+main .inner_container {
+    padding-right: 200px; /* Добавлен padding-right для main */
+    box-sizing: border-box;
+}
+
+main .inner_container > div {
     grid-row-start: 1;
     grid-column-start: 1;
     margin: auto;
@@ -24,30 +31,30 @@ main .inner_container > div{
     display: none;
 }
 
-main .inner_container > div.active{
+main .inner_container > div.active {
     display: block;
 }
 
-form label, form input:not([type=checkbox]){
+form label, form input:not([type=checkbox]) {
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
 
-form input:not([type=checkbox]){
+form input:not([type=checkbox]) {
     margin-bottom: 1.5rem;
 }
 
-form label{
+form label {
     margin-bottom: 0.5rem;
 }
 
-form, .switch{
+form, .switch {
     padding: 1rem;
     background: #fff;
 }
 
-form button{
+form button {
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -56,38 +63,234 @@ form button{
     font-size: 1.1rem;
     margin-top: 1rem;
     transition: background-color .5s;
+    border: none;
+    cursor: pointer;
 }
 
-form button:hover{
+form button:hover {
     background: #2b5164;
 }
 
 input {
     color: unset;
     transition: color .5s;
-    border-color: unset;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
-input a:hover{
+input:focus {
     border-color: #548eaa;
+    outline: none;
 }
 
-.switch{
+.switch {
     margin: 1rem 0;
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-
-.switch button{
+.switch button {
     background: none;
     font-size: 1rem;
     color: #548eaa;
     transition: color .5s;
+    border: none;
+    cursor: pointer;
 }
 
-.switch button:hover{
+.switch button:hover {
     color: #2b5164;
 }
 
+header {
+    position: relative;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icons a {
+    margin-left: 1rem;
+}
+
+.burger-menu {
+    display: none; /* Скрытие бургер-меню по умолчанию */
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s; /* Плавный переход для opacity и visibility */
+    z-index: 10; /* Установка z-index для перекрытия контента */
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible; /* Отображение overlay при добавлении класса active */
+}
+
+.trending {
+    position: fixed;
+    top: 6.5rem;
+    width: calc(200px - 1rem);
+    background: #fff;
+    right: 0;
+    left: 1024px;
+    margin: auto;
+    transform: translatex(-50%);
+}
+
+.trending > h2 {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.trending .post {
+    padding-top: 0;
+}
+
+.trending .post h2 {
+    border-top: 1px solid darkgray;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    padding-top: 1rem;
+}
+
+.trending .post_stats {
+    margin-top: .5rem;
+}
+
+.post {
+    background: #fff;
+    padding: 1rem;
+    display: block;
+}
+
+.posts .post {
+    margin: 1rem;
+}
+
+.post .post_info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .post_info .username {
+    font-weight: bold;
+}
+
+.posts .post > h2 {
+    margin-bottom: 2rem;
+}
+
+.post .cover {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.post .cover img {
+    max-width: 100%;
+}
+
+.post .preview {
+    text-align: justify;
+}
+
+.post a {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 1rem 0;
+    border-radius: 5%;
+    transition: all .5s;
+}
+
+.post a:hover {
+    color: #fff;
+    background: #548eaa;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.post .post_stats img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .burger-menu {
+        display: block; /* Отображение бургер-меню на узких экранах */
+    }
+    .main-nav {
+        display: none; /* Скрытие навигационного меню на узких экранах */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 20;
+        padding: 2rem 1rem;
+        transition: transform 0.3s;
+        transform: translateX(-100%);
+    }
+    .main-nav.active {
+        transform: translateX(0); /* Показ навигационного меню при добавлении класса active */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main .inner_container {
+        padding-right: 0;
+    }
+    .post .cover, .post .preview {
+        display: none;
+    }
+    .posts .post > h2 {
+        margin-bottom: 0;
+    }
+    .post .post_stats {
+        display: inline-flex;
+    }
+
+    span{
+        font-size: 0.8rem;
+    }
+
+}

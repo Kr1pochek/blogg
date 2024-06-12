@@ -112,3 +112,19 @@ main .inner_container{
 .post .post_stats .stat p{
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 600px) {
+    main .inner_container{
+        padding-right: 0;
+    }
+    .post .cover, .psot .preview{
+        display: none;
+    }
+    .posts .post >h2{
+        margin-bottom: 0;
+    }
+    .post .post_stats{
+        display: inline-flex;
+
+    }
+}

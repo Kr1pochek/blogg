@@ -10,25 +10,8 @@
     <title>blog</title>
 </head>
 <body>
-<header>
-    <div class="inner_container">
-        <nav>
-            <a href="#">Все</a>
-            <a href="#">Разработка</a>
-            <a href="#">Дизайн</a>
-            <a href="#">Администрирование</a>
-            <div class="icons">
-                <a href="search">
-                    <img src="assets/images/search-svgrepo-com.svg" alt="">
-                </a>
-                <a href="users">
-                    <img src="assets/images/profile-1341-svgrepo-com.svg" alt="">
-                </a>
-            </div>
-        </nav>
-    </div>
-</header>
-
+<?php include "include/header.php";?>
+<div class="overlay"></div>
 <main>
     <div class="inner_container">
         <div class="post">
@@ -87,28 +70,8 @@
     </div>
 </main>
 
-<footer>
-    <div class="copyright">
-        <p>© 2006–2024, blog</p>
-    </div>
-    <div class="socials">
-        <a href="#">
-            <img src="assets/images/vk-svgrepo-com.svg" alt="">
-        </a>
-        <a href="#">
-            <img src="assets/images/telegram-svgrepo-com.svg" alt="">
-        </a>
-        <a href="#">
-            <img src="assets/images/facebook-rounded-svgrepo-com.svg" alt="">
-        </a>
-        <a href="#">
-            <img src="assets/images/twitter-rounded-svgrepo-com.svg" alt="">
-        </a>
-        <a href="#">
-            <img src="assets/images/instagram-rounded-svgrepo-com.svg" alt="">
-        </a>
-    </div>
-</footer>
-
+<?php include "include/footer.php";?>
+<script src="assets/js/index.js"></script>
+<script src="./assets/js/common.js"></script>
 </body>
 </html>
